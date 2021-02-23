@@ -17,7 +17,7 @@ package cn.org.wyxxt.singleton;
  * 双重检查，单例写法
  */
 public class Mgr06 {
-    private static Mgr06 INSTANCE;
+    private static volatile Mgr06 INSTANCE; //指令重排为题 JIT
 
     private Mgr06() {
     }

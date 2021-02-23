@@ -20,6 +20,7 @@ package cn.org.wyxxt.singleton;
  * 静态内部类
  * Effictive JAVA
  * 枚举单例
+ * 解决线程同步问题，同时还可以防止反序列化 枚举类没有构造方法,无法反射
  */
 public enum Mgr09 {
 
