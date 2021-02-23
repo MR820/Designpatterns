@@ -6,7 +6,7 @@ package cn.org.wyxxt.strategy;
  * @time 2021/2/23 4:15 下午
  * @email jsjxzw@163.com
  */
-public class Dog implements Comparable<Dog> {
+public class Dog {
     int food;
 
     public Dog(int food) {
@@ -21,10 +21,4 @@ public class Dog implements Comparable<Dog> {
                 '}';
     }
 
-    @Override
-    public int compareTo(Dog d) {
-        if (this.food < d.food) return -1;
-        else if (this.food > d.food) return 1;
-        else return 0;
-    }
 }

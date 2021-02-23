@@ -16,8 +16,8 @@ public class Main {
 
         Dog[] a = {new Dog(3), new Dog(5), new Dog(1)};
 
-        Sorter sorter = new Sorter();
-        sorter.sort(a);
+        Sorter<Dog> sorter = new Sorter();
+        sorter.sort(a, new DogComparator());
         System.out.println(Arrays.toString(a));
     }
 }
