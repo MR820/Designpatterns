@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract Factory {
+    + create() : Movable
+}
+
+abstract PlaneFactory
+abstract CarFactory
+
+Factory <|-- PlaneFactory
+Factory <|-- CarFactory
+
+class Plane
+
+PlaneFactory <|-- Plane
+
+class Car
+
+CarFactory <|-- Car
+
+abstract Movable
+
+Movable <|-- Car
+Movable <|-- Plane
+
+Movable *-- Factory
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractFactory {
+    + createWeapon()
+    + createFood()
+    + createVehicle()
+}
+abstract Weapon {
+    + shoot()
+}
+abstract Food {
+    + printName()
+}
+abstract Vehicle {
+    + go()
+}
+
+AbstractFactory - Weapon : create >
+AbstractFactory - Food : create >
+AbstractFactory - Vehicle : create >
+
+class ModernFactory
+
+AbstractFactory <|-- ModernFactory
+
+class Car
+
+class Bread
+
+class AK47
+
+ModernFactory <|-- Car
+ModernFactory <|-- Bread
+ModernFactory <|-- AK47
+
+Vehicle <|-- Car
+Food <|-- Bread
+Weapon <|-- AK47
+
+
+class MagicFactory
+
+AbstractFactory <|-- MagicFactory
+
+class MagicStick
+
+class Broom
+
+class MushRoom
+
+Weapon <|-- MagicStick
+MagicFactory <|-- MagicStick
+Vehicle <|-- Broom
+MagicFactory <|-- Broom
+Food <|-- MushRoom
+MagicFactory <|-- MushRoom
+
+@enduml
