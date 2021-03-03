@@ -1,0 +1,4 @@
+认识 javascript event 对象
+
+在很多系统中，Observer模式往往和责任链共同负责对于事件的处理，
+其中某一个observer负责是否将事件进一步传递
