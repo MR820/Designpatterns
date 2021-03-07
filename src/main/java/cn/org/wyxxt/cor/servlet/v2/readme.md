@@ -1,0 +1,3 @@
+# 用最直观的方式处理response
+
+直接讲response的处理放在request的下面
